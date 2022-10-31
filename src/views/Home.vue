@@ -7,10 +7,6 @@
  * @Description: NavBar Component
 -->
 <template>
-  <!-- 导航组件 -->
-  <NavBar />
-  <!-- 侧边栏组件 -->
-  <SliderBar />
   <div id="body-container">
     <!-- 轮播图 -->
     <el-carousel :interval="4000" trigger="click" height="100vh" class="slot-carousel">
@@ -27,8 +23,6 @@
     <!-- SlotIntro -->
     <SlotIntro />
   </div>
-  <!-- 底部栏 -->
-  <SlotFooter />
 </template>
 
 <script setup lang="ts">

@@ -19,12 +19,18 @@ const info = reactive([
 </script>
 
 <template>
+  <!-- 导航组件 -->
+  <NavBar />
+  <!-- 侧边栏组件 -->
+  <SliderBar />
   <!-- 路由组件 -->
   <router-view v-slot="{ Component }">
     <keep-alive>
       <component :is="Component" />
     </keep-alive>
   </router-view>
+  <!-- 底部栏 -->
+  <SlotFooter />
 </template>
 
 <style scoped>

@@ -9,28 +9,36 @@
 <template>
   <div id="header-container">
     <ul class="header-ul">
-      <li class="first-li"><a href="#"><img src="../../assets/img/jackpot.png" alt=""></a></li>
-      <li class="hover-li hover-active" @click="handleNavActive(0, '/')"><a href="">HOME</a></li>
-      <li class="hover-li" @click="handleNavActive(1, '/product')"><a href="">PRODUCT</a></li>
-      <li class="hover-li" @click="handleNavActive(2, '/about')"><a href="">ABOUT</a></li>
-      <li class="hover-li" @click="handleNavActive(3, '/privacy')"><a href="/privacy">PRIVACY POLICY</a></li>
-      <li class="hover-li" @click="handleNavActive(4, '/terms')"><a href="/terms">TERMS OF SERVICE</a></li>
+      <li class="first-li"><a href="javascript:void(0)"><img src="../../assets/img/jackpot.png" alt=""></a></li>
+      <li class="hover-li hover-active" @click="handleNavActive(0, '/')"><a href="javascript:void(0)">HOME</a></li>
+      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <li class="hover-li" @click="handleNavActive(1, 'product')"><a href="javascript:void(0)">PRODUCT</a></li>
+      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <li class="hover-li" @click="handleNavActive(2, 'about')"><a href="javascript:void(0)">ABOUT</a></li>
+      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <li class="hover-li" @click="handleNavActive(3, 'privacy')"><a href="javascript:void(0)">PRIVACY POLICY</a></li>
+      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <li class="hover-li" @click="handleNavActive(4, 'terms')"><a href="javascript:void(0)">TERMS OF SERVICE</a></li>
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue'
+  import { useRouter } from 'vue-router';
   import { useStore } from '../../store'
 
   const store = useStore()
+  const router = useRouter()
 
   const handleNavActive = (n: number, path: string) => {
     store.activeNavBar = n
     const liNodeList: HTMLCollectionOf<Element> = document.getElementsByClassName('hover-li')
-    liNodeList.forEach(node => {
-      node.classList.remove('hover-active')
-    })
+    for(let i = 0; i < liNodeList.length; i++) {
+      liNodeList[i].classList.remove('hover-active')
+    }
+    liNodeList[n].classList.add('hover-active')
+    router.push(path)
   }
 
   // onMounted()
@@ -114,15 +122,25 @@
           }
         }
 
+        .sep-line {
+          // flex: none;
+          // width: 15px;
+          height: 90px;
+        }
+
         .hover-li:hover {
           // background-color: aqua;
-          background-image: linear-gradient(to bottom , #3a3863, #4238b7, #d0d7fc);
+          background-image: linear-gradient(to bottom , rgba(27, 22, 88, 0.9), rgba(27, 22, 88, 0.4));
           cursor: pointer;
         }
 
         .hover-active {
-          // background-color: aqua;
-          background-image: linear-gradient(to bottom , #3a3863, #4238b7, #d0d7fc);
+          // background-image: linear-gradient(to bottom , #3e33a5, #4c5ddb);
+          background-image: url('../../assets/img/daohanglan_02.png');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-position: left top;
+          
         }
       }
     }

@@ -9,8 +9,9 @@
 <template>
   <div id="body-container">
     <div class="inner-container">
-      <p>FREE SLOTS GAME AT JACKPOT-FEVERGAME.COM</p>
-      <p>CASINO SLOTS FOR EVERYONE</p>
+      <!-- <p>FREE SLOTS GAME AT JACKPOT-FEVERGAME.COM</p>
+      <p>CASINO SLOTS FOR EVERYONE</p> -->
+      <img class="word-text" src="../../assets/img/words.png" alt="">
       <div class="intro-imgbg">
         <img src="../../assets/img/bodybg_02.png" alt="logo icon">
       </div>
@@ -35,12 +36,12 @@
   @media screen and (min-width: 768px) {
     #body-container {
       width: 100%;
-      height: 600px;
       background-image: url('../../assets/img/bodybg_01.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: left top;
       opacity: 1;
+      // margin-top: 50px;
 
       .inner-container {
         width: 100%;
@@ -50,6 +51,14 @@
         flex-flow: column nowrap;
         justify-content: space-around;
         align-items: center;
+        padding: 90px 0 20px 0;
+
+        .word-text {
+          padding-bottom: 20px;
+          width: 90%;
+          max-width: 1400px;
+          text-align: center;
+        }
 
         p {
           margin: 50px 0 15px 0;
@@ -93,6 +102,14 @@
         flex-flow: column nowrap;
         justify-content: space-around;
         align-items: center;
+        padding: 35px 0;
+
+        .word-text {
+          padding-bottom: 20px;
+          width: 90%;
+          max-width: 1400px;
+          text-align: center;
+        }
 
         p {
           margin: 25px 0 5px 0;

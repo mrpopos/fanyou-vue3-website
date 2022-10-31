@@ -7,10 +7,6 @@
  * @Description: NavBar Component
 -->
 <template>
-  <!-- 导航组件 -->
-  <NavBar />
-  <!-- 侧边栏组件 -->
-  <SliderBar />
   <div id="body-container">
     <div class="game-cate">
       <div class="game-1">
@@ -21,8 +17,6 @@
       <img src="../assets/img/bodybg_02.png" alt="">
     </div>
   </div>
-  <!-- 底部栏 -->
-  <SlotFooter />
 </template>
 
 <script setup lang="ts">
