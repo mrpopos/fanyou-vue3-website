@@ -2,7 +2,7 @@
  * @Author: tushaolong 1213167844@qq.com
  * @Date: 2022-10-24 16:08:54
  * @LastEditors: tushaolong 1213167844@qq.com
- * @LastEditTime: 2022-10-31 21:07:22
+ * @LastEditTime: 2022-11-01 14:10:51
  * @FilePath: \web\fanyou-vue3-website\src\components\nav-bar\index.vue
  * @Description: NavBar Component
 -->
@@ -11,20 +11,20 @@
     <ul class="header-ul">
       <li class="first-li"><a href="javascript:void(0)"><img src="../../assets/img/jackpot.png" alt=""></a></li>
       <li class="hover-li hover-active" @click="handleNavActive(0, '/')"><a href="javascript:void(0)">HOME</a></li>
-      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <!-- <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(1, 'product')"><a href="javascript:void(0)">PRODUCT</a></li>
-      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <!-- <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(2, 'about')"><a href="javascript:void(0)">ABOUT</a></li>
-      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <!-- <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(3, 'privacy')"><a href="javascript:void(0)">PRIVACY POLICY</a></li>
-      <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div>
+      <!-- 、<div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(4, 'terms')"><a href="javascript:void(0)">TERMS OF SERVICE</a></li>
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  // import { ref } from 'vue'
   import { useRouter } from 'vue-router';
   import { useStore } from '../../store'
 
@@ -40,8 +40,6 @@
     liNodeList[n].classList.add('hover-active')
     router.push(path)
   }
-
-  // onMounted()
 
 </script>
 
@@ -84,15 +82,13 @@
         align-items: center;
 
         li {
-          height: 100%;
-          // width: 20%;
+          height: 90px;
+          width: 20%;
           overflow: hidden;
-          // color: #FFFFFF;
           font-size: 24px;
           font-weight: 800;
-          // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           font-family: 'Microsoft YaHei UI';
-          letter-spacing: 1px;
+          // letter-spacing: 1px;
           text-align: center;
           line-height: 90px;
           flex: auto;
@@ -123,7 +119,7 @@
         }
 
         .sep-line {
-          // flex: none;
+          flex: none;
           // width: 15px;
           height: 90px;
         }

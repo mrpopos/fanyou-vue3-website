@@ -2,17 +2,17 @@
  * @Author: tushaolong 1213167844@qq.com
  * @Date: 2022-10-24 16:08:54
  * @LastEditors: tushaolong 1213167844@qq.com
- * @LastEditTime: 2022-10-31 20:54:56
+ * @LastEditTime: 2022-11-01 17:37:56
  * @FilePath: \web\fanyou-vue3-website\src\components\nav-bar\index.vue
  * @Description: NavBar Component
 -->
 <template>
   <div id="slider-container">
     <span class="slider-span" id="slider-span">
-      <button @click="handleSliderMenuOpen"><img src="../../assets/img/slider_menu.png" alt="" /></button>
+      <img @click="handleSliderMenuOpen" src="../../assets/img/slider_menu.png" alt="" />
     </span>
     <ul class="slider-ul" id="slider-ul">
-      <li class="first-li"><a href="#"><img src="../../assets/img/menu_close.png" alt="" @click="handleSliderMenuClose"></a></li>
+      <!-- <li class="first-li"><a href="#"><img src="../../assets/img/menu_close.png" alt="" @click="handleSliderMenuClose"></a></li> -->
       <li class="hover-li"><a href="/">HOME</a></li>
       <li class="hover-li"><a href="/product">PRODUCT</a></li>
       <li class="hover-li"><a href="/about">ABOUT</a></li>
@@ -63,27 +63,31 @@
 
       .slider-span {
         display: block;
-        position: absolute;
-        right: 20px;
+        width: 36px;
+        height: 36px;
+        position: fixed;
+        left: 20px;
         top: 20px;
         z-index: 1;
 
         img {
+          width: 100%;
+          height: 100%;
           opacity: 1;
         }
       }
 
       .slider-ul {
-        padding: 30px;
+        padding-top: 20px;
         display: none;
-        width: 100vw;
+        width: 245px;
         height: 100vh;
         position: absolute;
-        background-color: rgba(14, 72, 95, 1);
+        background-color: #262076;
         z-index: 1;
 
         li {
-          height: 30px;
+          height: 60px;
           width: 100%;
           overflow: hidden;
           font-size: 20px;
@@ -91,38 +95,22 @@
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           letter-spacing: 1px;
           text-align: left;
-          line-height: 30px;
+          line-height: 60px;
           flex: auto;
+          padding-left: 15px;
+
 
           a {
             display: inline-block;
             width: 100%;
             height: 100%;
-            color: #7c119c;
-          }
-        }
-
-        .first-li {
-          flex: none;
-          width: 100%;
-          
-          a {
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            text-align: right;
-
-            img {
-              width: auto;
-              height: 32px;
-              padding: 4px;
-            }
+            color: #FFFFFF;
           }
         }
 
         .hover-li:hover {
-          // background-color: aqua;
-          background-image: linear-gradient(to bottom , #3a3863, #4238b7, #d0d7fc);
+          background-color: #1e185f;
+          // background-image: linear-gradient(to bottom , #3a3863, #4238b7, #d0d7fc);
           cursor: pointer;
         }
       }

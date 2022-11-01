@@ -2,7 +2,7 @@
  * @Author: tushaolong 1213167844@qq.com
  * @Date: 2022-10-24 16:08:54
  * @LastEditors: tushaolong 1213167844@qq.com
- * @LastEditTime: 2022-10-31 20:53:26
+ * @LastEditTime: 2022-11-01 17:57:13
  * @FilePath: \web\fanyou-vue3-website\src\components\nav-bar\index.vue
  * @Description: NavBar Component
 -->
@@ -11,6 +11,14 @@
     <div class="game-cate">
       <div class="game-1">
         <img src="../assets/img/game-cate.png" alt="">
+        <div class="down-btn">
+          <a href="https://play.google.com/store/apps/details?id=com.jackpotfeverslot.com">
+            <img src="../assets/img/google.png" alt="">
+          </a>
+          <a href="https://apps.apple.com/us/app/jackpot-fever-casino-slots/id1626961297">
+            <img src="../assets/img/appstore.png" alt="">
+          </a>
+        </div>
       </div>
     </div>
     <div class="icon-img">
@@ -45,17 +53,32 @@
       opacity: 1;
 
       .game-cate {
-        padding: 50px 0 0 0;
+        padding: 80px 0 0 0;
         width: 100%;
         margin-top: 88px;
 
         .game-1 {
           width: 100%;
           height: auto;
+          position: relative;
 
           img {
             width: 100%;
             height: auto;
+          }
+
+          .down-btn {
+            height: 12%;
+            width: auto;
+            position: absolute;
+            bottom: 30px;
+            left: 53%;
+
+
+            img {
+              height: 100%;
+              width: auto;
+            }
           }
         }
       }
@@ -90,10 +113,25 @@
         .game-1 {
           width: 100%;
           height: auto;
+          position: relative;
 
           img {
             width: 100%;
             height: auto;
+          }
+
+          .down-btn {
+            height: 12%;
+            width: auto;
+            position: absolute;
+            bottom: 18px;
+            left: 51%;
+
+
+            img {
+              height: 100%;
+              width: auto;
+            }
           }
         }
       }
@@ -128,10 +166,27 @@
         .game-1 {
           width: 100%;
           height: auto;
+          position: relative;
 
           img {
             width: 100%;
             height: auto;
+          }
+
+          .down-btn {
+            height: 14%;
+            width: auto;
+            position: absolute;
+            bottom: 10px;
+            left: 48%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+
+            img {
+              height: 100%;
+              width: auto;
+            }
           }
         }
       }

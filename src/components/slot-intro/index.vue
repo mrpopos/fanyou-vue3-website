@@ -2,15 +2,13 @@
  * @Author: tushaolong 1213167844@qq.com
  * @Date: 2022-10-24 16:08:54
  * @LastEditors: tushaolong 1213167844@qq.com
- * @LastEditTime: 2022-10-31 19:08:12
+ * @LastEditTime: 2022-11-01 15:05:36
  * @FilePath: \web\fanyou-vue3-website\src\components\nav-bar\index.vue
  * @Description: NavBar Component
 -->
 <template>
   <div id="body-container">
     <div class="inner-container">
-      <!-- <p>FREE SLOTS GAME AT JACKPOT-FEVERGAME.COM</p>
-      <p>CASINO SLOTS FOR EVERYONE</p> -->
       <img class="word-text" src="../../assets/img/words.png" alt="">
       <div class="intro-imgbg">
         <img src="../../assets/img/bodybg_02.png" alt="logo icon">
@@ -41,7 +39,7 @@
       background-size: cover;
       background-position: left top;
       opacity: 1;
-      // margin-top: 50px;
+      margin-top: 89px;
 
       .inner-container {
         width: 100%;
@@ -92,7 +90,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: left top;
-      opacity: 0.6;
+      opacity: 1;
 
       .inner-container {
         width: 100%;

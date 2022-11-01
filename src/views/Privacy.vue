@@ -2,7 +2,7 @@
  * @Author: tushaolong 1213167844@qq.com
  * @Date: 2022-10-24 16:08:54
  * @LastEditors: tushaolong 1213167844@qq.com
- * @LastEditTime: 2022-10-31 20:56:40
+ * @LastEditTime: 2022-11-01 14:48:48
  * @FilePath: \web\fanyou-vue3-website\src\components\nav-bar\index.vue
  * @Description: NavBar Component
 -->
@@ -172,7 +172,7 @@
       background-position: left top;
       opacity: 1;
       margin-top: 88px;
-      padding: 20px 0 60px 0;
+      padding: 50px 0 60px 0;
 
       .game-cate {
         padding: 60px 80px;
@@ -187,7 +187,6 @@
         .block-content {
           font-family: 'Microsoft YaHei UI';
           color: #434759;
-          // letter-spacing: 0.1px;
           line-height: 28px;
 
           h1 {
@@ -242,7 +241,6 @@
         .block-content {
           font-family: 'Microsoft YaHei UI';
           color: #434759;
-          // letter-spacing: 0.1px;
           line-height: 28px;
 
           h1 {
