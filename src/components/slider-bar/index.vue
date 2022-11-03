@@ -2,7 +2,7 @@
  * @Author: tushaolong 1213167844@qq.com
  * @Date: 2022-10-24 16:08:54
  * @LastEditors: tushaolong 1213167844@qq.com
- * @LastEditTime: 2022-11-01 17:37:56
+ * @LastEditTime: 2022-11-02 11:29:44
  * @FilePath: \web\fanyou-vue3-website\src\components\nav-bar\index.vue
  * @Description: NavBar Component
 -->
@@ -12,18 +12,20 @@
       <img @click="handleSliderMenuOpen" src="../../assets/img/slider_menu.png" alt="" />
     </span>
     <ul class="slider-ul" id="slider-ul">
-      <!-- <li class="first-li"><a href="#"><img src="../../assets/img/menu_close.png" alt="" @click="handleSliderMenuClose"></a></li> -->
-      <li class="hover-li"><a href="/">HOME</a></li>
-      <li class="hover-li"><a href="/product">PRODUCT</a></li>
-      <li class="hover-li"><a href="/about">ABOUT</a></li>
-      <li class="hover-li"><a href="/privacy">PRIVACY POLICY</a></li>
-      <li class="hover-li"><a href="/terms">TERMS OF SERVICE</a></li>
+      <li class="hover-li" @click="handleNavActive(0, '/')"><a href="javascript:void(0)">HOME</a></li>
+      <li class="hover-li" @click="handleNavActive(1, '/product')"><a href="javascript:void(0)">PRODUCT</a></li>
+      <li class="hover-li" @click="handleNavActive(2, '/about')"><a href="javascript:void(0)">ABOUT</a></li>
+      <li class="hover-li" @click="handleNavActive(3, '/privacy')"><a href="javascript:void(0)">PRIVACY POLICY</a></li>
+      <li class="hover-li" @click="handleNavActive(4, '/terms')"><a href="javascript:void(0)">TERMS OF SERVICE</a></li>
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  // import { ref } from 'vue'
+  import { useRouter } from 'vue-router';
+
+  const router = useRouter()
 
   const handleSliderMenuOpen = () => {
     const sliderSpanNode: HTMLElement | null = document.getElementById('slider-span')
@@ -39,6 +41,11 @@
     // console.log(sliderUlNode)
     sliderSpanNode!.style.display = 'block'
     sliderUlNode!.style.display = 'none'
+  }
+
+  const handleNavActive = (n: number, path: string) => {
+    handleSliderMenuClose()
+    router.push(path)
   }
 </script>
 

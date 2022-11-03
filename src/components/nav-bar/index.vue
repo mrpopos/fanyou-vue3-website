@@ -2,7 +2,7 @@
  * @Author: tushaolong 1213167844@qq.com
  * @Date: 2022-10-24 16:08:54
  * @LastEditors: tushaolong 1213167844@qq.com
- * @LastEditTime: 2022-11-01 14:10:51
+ * @LastEditTime: 2022-11-02 11:23:10
  * @FilePath: \web\fanyou-vue3-website\src\components\nav-bar\index.vue
  * @Description: NavBar Component
 -->
@@ -11,13 +11,9 @@
     <ul class="header-ul">
       <li class="first-li"><a href="javascript:void(0)"><img src="../../assets/img/jackpot.png" alt=""></a></li>
       <li class="hover-li hover-active" @click="handleNavActive(0, '/')"><a href="javascript:void(0)">HOME</a></li>
-      <!-- <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(1, 'product')"><a href="javascript:void(0)">PRODUCT</a></li>
-      <!-- <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(2, 'about')"><a href="javascript:void(0)">ABOUT</a></li>
-      <!-- <div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(3, 'privacy')"><a href="javascript:void(0)">PRIVACY POLICY</a></li>
-      <!-- 、<div><img class="sep-line" src="../../assets/img/daohanglan_03.png" alt="" /></div> -->
       <li class="hover-li" @click="handleNavActive(4, 'terms')"><a href="javascript:void(0)">TERMS OF SERVICE</a></li>
     </ul>
   </div>
